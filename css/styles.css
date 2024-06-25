@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: #BC5A94
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif
+}
+
+.content {
+    height: 400px;
+    width: 400px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.content h1 {
+    font-size: 30px;
+    font-weight: bold;
+    color: aliceblue;
+}
+
+.content p {
+    font-size: 20px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.content #contadorVisitas{
+    color: #FFDE95;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: #F075AA;
+    transition: all 1s ease;
+}
+
+button:hover {
+    transform: scale(1.2)
+}
+
+
