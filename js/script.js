@@ -1,25 +1,18 @@
-const counter = document.getElementById('contadorVisitas')
-const resetBtn = document.getElementById('btnReestablecer')
+const contadorVisitas = document.getElementById("contadorVisitas")
+const btnReestablecer = document.getElementById("btnReestablecer")
 
-/*const countVisit = () => {
-localStorage.setItem('counter',(parseInt(localStorage.getItem('counter')) || 0)+ 1)
-console.log(localStorage.getItem('counter'))
-counter.innerHTML = localStorage.getItem('counter')
-}*/
-
-const resetVisit = () => {
-localStorage.setItem('counter', 0)
-counter.innerHTML = localStorage.getItem('counter')
+let visita = parseInt(localStorage.getItem("visit")) || 0
+function addVisita () {
+  visita++
+  localStorage.setItem("visit", visita)
+  contadorVisitas.innerText = visita
 }
 
-resetBtn.addEventListener('click', resetVisit)
-/*window.addEventListener('load', countVisit)*/
+btnReestablecer.addEventListener("click", () => {
+  // localStorage.setItem("visit", 0)
+  // localStorage.clear()
+  localStorage.removeItem("visit")
+  contadorVisitas.innerText = 0
+})
 
-/*Codigo de Data*/
-
-let getCountLocal = parseInt(localStorage.getItem('counter')) || 0
-
-getCountLocal++
-
-localStorage.setItem('counter', getCountLocal)
-contadorVisitas.textContent = localStorage.getItem('counter')
+addVisita()
